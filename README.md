@@ -112,4 +112,4 @@ python -m venv .venv
 pip install -r requirements.txt
 
 # Run Streamlit app
-streamlit run pages/1_Dataset.py
+streamlit run Home.py

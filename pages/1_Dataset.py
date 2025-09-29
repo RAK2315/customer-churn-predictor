@@ -178,7 +178,7 @@ sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', ax=ax)
 plt.tight_layout()
 st.pyplot(fig, clear_figure=True)
 
-# 8. scatter plot 
+# 8. scatter plot   
 st.write("### Scatter Plot of Two Numeric Variables")
 numeric_options = list(filtered_df.select_dtypes(include=['float64','int64']).columns)
 x_col = st.selectbox(

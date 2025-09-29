@@ -33,42 +33,69 @@ containing information about 7,043 customers, including:
 - **Target variable:** Churn (Yes/No)
 
 ---
+## Exploratory Data Analysis (EDA)
+
+The first step is understanding the dataset and identifying patterns related to churn.
+
+### Churn Distribution
+<p align="center">
+  <img src="images/churn_distribution.png" alt="Churn Distribution" width="600"/>
+</p>
+Shows the overall churn rate and highlights class imbalance.
+
+### Tenure vs Churn
+<p align="center">
+  <img src="images/tenure_churn.png" alt="Tenure vs Churn" width="600"/>
+</p>
+Indicates which tenure segments are more likely to churn.
+
+### MonthlyCharges & Churn
+<p align="center">
+  <img src="images/monthlycharges_churn.png" alt="MonthlyCharges vs Churn" width="600"/>
+</p>
+Shows the relationship between monthly charges and churn likelihood.
+
+---
 
 ## Streamlit App
 
-The Streamlit app allows:
+The project includes a **Streamlit web app** that provides an **interactive interface** for exploring the dataset, visualizing key patterns, and analyzing model results. It allows both technical and non-technical users to gain insights without touching the code.
 
-- **Dataset exploration** with filters and summary statistics
-- **Visualizations**:
+### Key Features
+
+- **Interactive Dataset Exploration**  
+  Preview the dataset, filter by categorical and numerical columns, and download the filtered dataset as CSV.
+
+- **Visualizations**  
+  The app provides multiple charts to explore churn patterns and customer behavior:
   - Churn distribution
   - Tenure vs Churn
   - MonthlyCharges and TotalCharges distributions
   - Contract type & Internet service analysis
   - Correlation heatmap
-  - Custom scatter plots
+  - Custom scatter plots with user-selected axes and color encoding
 
-### Churn Distribution
-<img src="images/churn_distribution.png" alt="Churn Distribution" width="600"/>
+- **Model Results**  
+  View model evaluation results including confusion matrix and training metrics.
 
-### Tenure vs Churn
-<img src="images/tenure_churn.png" alt="Tenure vs Churn" width="600"/>
+### Screenshots
 
-### MonthlyCharges & Churn
-<img src="images/monthlycharges_churn.png" alt="MonthlyCharges vs Churn" width="600"/>
+#### Dataset Explorer
+<p align="center">
+  <img src="images/dataset_explorer.png" alt="Dataset Explorer" width="600"/>
+</p>
 
-### Dataset Explorer
-<img src="images/dataset_explorer.png" alt="Dataset Explorer" width="600"/>
+#### ML Training Results
+<p align="center">
+  <img src="images/ml_training_results.png" alt="ML Training Results" width="600"/>
+</p>
 
-### ML Training Results
-<img src="images/ml_training_results.png" alt="ML Training Results" width="600"/>
+### Navigation
 
-### Model Comparison
-<img src="images/model_comparison.png" alt="Model Comparison" width="600"/>
-
-**Entry point:** `Home.py`  
-**Additional pages:** `pages/1_Dataset.py` and `pages/2_ML Workflow.py`  
-
----
+- **Entry point:** `Home.py`  
+- **Additional pages:**  
+  - `pages/1_Dataset.py` – Dataset exploration and visualizations  
+  - `pages/2_ML Workflow.py` – Model training, evaluation, and insights
 
 ## Machine Learning Workflow
 
@@ -90,6 +117,10 @@ Tested several models:
 | Gradient Boosting | 0.7194                  | 0.50                | 0.70                      |
 
 **Gradient Boosting Classifier (GBC)** was selected as the **best model**.
+
+<p align="center">
+  <img src="images/model_comparison.png" alt="Model Comparison" width="600"/>
+</p>
 
 ### Hyperparameter Tuning (Grid Search)
 

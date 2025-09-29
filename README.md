@@ -140,8 +140,10 @@ Tested several models:
 | **Macro avg** | 0.72 | 0.70 | 0.71 | 704 |
 | **Weighted avg** | 0.81 | 0.82 | 0.81 | 704 |
 
-- **Confusion Matrix**: Highlights correct predictions of churn and non-churn customers  
-  ![Confusion Matrix](images/confusion_matrix.png)
+- **Confusion Matrix (Test Set)**: Highlights correct predictions of churn and non-churn customers on the **10% test split** (~704 samples).  
+  <p align="center">
+    <img src="images/confusion_matrix.png" alt="Confusion Matrix" width="600"/>
+  </p>
 
 ---
 
@@ -178,7 +180,7 @@ Tested several models:
 
 ## How to Run the Project
 
-### Streamlit App (Optional)
+### Streamlit App 
 
 ```bash
 # Clone repo

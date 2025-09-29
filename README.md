@@ -3,7 +3,8 @@
 
 ## Project Overview
 
-This project focuses on predicting customer churn for a telecom company. The primary goal is to **identify customers likely to churn** and provide actionable insights to reduce churn. While the project includes a **Streamlit frontend for dataset exploration**, the **main emphasis is on the ML workflow**, feature engineering, and model performance.
+This project focuses on predicting customer churn for a telecom company. The primary goal is to **identify customers likely to churn** and provide actionable insights to reduce churn. While the project includes a **Streamlit frontend for dataset exploration** , the **main emphasis is on the ML workflow**, feature engineering, and model performance.
+[**Streamlit App**](https://csp-rak2315.streamlit.app/)
 
 ---
 

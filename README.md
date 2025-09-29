@@ -48,22 +48,22 @@ The Streamlit app allows:
   - Custom scatter plots
 
 ### Churn Distribution
-![Churn Distribution](images/churn_distribution.png)
+<img src="images/churn_distribution.png" alt="Churn Distribution" width="600"/>
 
 ### Tenure vs Churn
-![Tenure vs Churn](images/tenure_churn.png)
+<img src="images/tenure_churn.png" alt="Tenure vs Churn" width="600"/>
 
 ### MonthlyCharges & Churn
-![MonthlyCharges vs Churn](images/monthlycharges_churn.png)
+<img src="images/monthlycharges_churn.png" alt="MonthlyCharges vs Churn" width="600"/>
 
 ### Dataset Explorer
-![Dataset Explorer](images/dataset_explorer.png)
+<img src="images/dataset_explorer.png" alt="Dataset Explorer" width="600"/>
 
 ### ML Training Results
-![ML Training Results](images/ml_training_results.png)
+<img src="images/ml_training_results.png" alt="ML Training Results" width="600"/>
 
 ### Model Comparison
-![Model Comparison](images/model_comparison.png)
+<img src="images/model_comparison.png" alt="Model Comparison" width="600"/>
 
 **Entry point:** `Home.py`  
 **Additional pages:** `pages/1_Dataset.py` and `pages/2_ML Workflow.py`  

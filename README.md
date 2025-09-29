@@ -1,5 +1,5 @@
 # Customer Churn Prediction Project
-![Customer Churn Banner](images/banner.jpg)
+![Customer Churn Banner](images/banner.png)
 
 ## Project Overview
 

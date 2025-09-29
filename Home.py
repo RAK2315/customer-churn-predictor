@@ -79,7 +79,7 @@ X = pd.DataFrame([input_dict], columns=feature_names)
 
 
 if st.button("Predict Churn"):
-    # --- Prediction ---
+    # Prediction 
     pred = model.predict(X)[0]
     probs = model.predict_proba(X)[0]
 

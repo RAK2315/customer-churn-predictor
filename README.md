@@ -7,9 +7,9 @@ This project focuses on predicting customer churn for a telecom company. The pri
 ---
 
 ## Dataset
-
-The dataset used is the **Telco Customer Churn dataset**, containing information about 7,043 customers, including:
-
+## Dataset  
+This project uses the **Telco Customer Churn**: [Customer Churn Prediction – Kaggle](https://www.kaggle.com/code/bhartiprasad17/customer-churn-prediction/data)  
+containing information about 7,043 customers, including:
 - Customer demographics (gender, senior citizen status, partner/dependent)
 - Account information (tenure, contract type, payment method)
 - Service usage details (phone service, internet service, streaming, tech support)

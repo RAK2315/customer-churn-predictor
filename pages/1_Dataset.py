@@ -53,20 +53,13 @@ for col, (min_val, max_val) in numeric_filters.items():
 
 st.sidebar.write(f"**Rows Selected:** {filtered_df.shape[0]}")
 
-# ----------------------
-# Dataset Preview
-# ----------------------
 st.subheader("Dataset Preview")
 st.dataframe(filtered_df.head(10))
 
 st.subheader("Summary Statistics")
 st.write(filtered_df.describe())
 
-# ----------------------
-# Visualization Options
-# ----------------------
 st.subheader("Visualizations")
-
 # 1. Churn distribution
 st.write("### Churn Distribution")
 churn_count = filtered_df['Churn'].value_counts().reset_index().rename(columns={'index':'Churn','Churn':'Count'})
@@ -89,15 +82,12 @@ st.altair_chart(chart2, use_container_width=True)
 st.write("") 
 st.write("") 
 st.write("") 
-# ----------------------
-# User-selected chart type for charges
-# ----------------------
+
 st.subheader("Chart Type Options for Charges")
 charge_chart_type = st.radio(
     "Choose chart type for MonthlyCharges & TotalCharges:",
     options=["Boxplot", "Histogram", "Average Bar Chart"]
 )
-
 # MonthlyCharges chart
 st.write("### Monthly Charges by Churn")
 if charge_chart_type == "Boxplot":
@@ -120,7 +110,6 @@ elif charge_chart_type == "Average Bar Chart":
         color='Churn:N'
     )
 st.altair_chart(chart_mc, use_container_width=True)
-
 # TotalCharges chart
 st.write("### Total Charges by Churn")
 if charge_chart_type == "Boxplot":
@@ -157,7 +146,6 @@ chart5 = alt.Chart(contract_counts).mark_bar().encode(
     tooltip=['Contract','Churn','Count']
 )
 st.altair_chart(chart5, use_container_width=True)
-
 # 6. Internet Service vs Churn
 st.write("### Internet Service vs Churn")
 internet_counts = filtered_df.groupby(['InternetService','Churn']).size().reset_index(name='Count')
@@ -168,7 +156,6 @@ chart6 = alt.Chart(internet_counts).mark_bar().encode(
     tooltip=['InternetService','Churn','Count']
 )
 st.altair_chart(chart6, use_container_width=True)
-
 # 7. Correlation heatmap
 st.write("### Correlation Heatmap")
 numeric_cols_corr = filtered_df.select_dtypes(include=['float64','int64']).columns
@@ -177,7 +164,6 @@ fig, ax = plt.subplots(figsize=(6,4))
 sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', ax=ax)
 plt.tight_layout()
 st.pyplot(fig, clear_figure=True)
-
 # 8. scatter plot   
 st.write("### Scatter Plot of Two Numeric Variables")
 numeric_options = list(filtered_df.select_dtypes(include=['float64','int64']).columns)
@@ -202,9 +188,7 @@ scatter_chart = alt.Chart(filtered_df).mark_circle(size=60, opacity=0.6).encode(
 st.altair_chart(scatter_chart, use_container_width=True)
 
 
-# ----------------------
-# Download Filtered Dataset
-# ----------------------
+
 st.subheader("Download Filtered Dataset")
 csv = filtered_df.to_csv(index=False).encode('utf-8')
 st.download_button(label="Download CSV", data=csv, file_name='filtered_telco_churn.csv', mime='text/csv')

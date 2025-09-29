@@ -135,10 +135,15 @@ st.write("""
 - **False Negatives:** 74 customers missed — opportunity for model improvement.
 
 ### Business Implications
-- High-risk customers can be **targeted with retention campaigns**, e.g., discounts or personalized services.  
-- **Pricing & Bundles:** Consider revising pricing or offering add-ons to reduce churn among at-risk segments.  
-- **Retention Strategy:** Focus on month-to-month, high monthly charges, and service-limited customers.  
-- **Monitoring:** Continuous model retraining is recommended as customer behavior evolves.
+- **Target high-risk customers:** Customers predicted as likely to churn (true positives) can be offered **personalized retention campaigns**, such as discounts, loyalty rewards, or proactive support.  
+- **Prioritize churn reduction for vulnerable segments:** New customers and those with higher monthly charges are more likely to churn. Focused onboarding and flexible payment options can help.  
+- **Monitor contract types and services:** Month-to-month contracts and Fiber Optic internet users churn more frequently. Consider incentives for longer-term contracts or bundled services.  
+- **Segmented marketing & upselling:** Insights enable targeted campaigns, cross-selling, or adjusting pricing plans for specific segments.  
+- **Balanced Accuracy (0.70):** Ensures fair treatment of both churned and retained customers.  
+- **Churn Recall (50%):** Identifies a significant portion of churners for proactive action.  
+- **Resource allocation optimization:** Helps retention teams focus on high-risk customers efficiently.  
+- **Continuous monitoring & feedback:** Real-time monitoring allows model refinement as customer behavior evolves.  
+- **Strategic decision-making:** Insights can inform pricing strategy, product bundling, and customer experience improvements.
 
 ### Next Steps
 - Collect additional behavioral features for better predictive power.  

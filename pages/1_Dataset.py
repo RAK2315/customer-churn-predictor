@@ -178,18 +178,29 @@ sns.heatmap(corr, annot=True, fmt=".2f", cmap='coolwarm', ax=ax)
 plt.tight_layout()
 st.pyplot(fig, clear_figure=True)
 
-# 8. Optional scatter plot
+# 8. scatter plot 
 st.write("### Scatter Plot of Two Numeric Variables")
 numeric_options = list(filtered_df.select_dtypes(include=['float64','int64']).columns)
-x_col = st.selectbox("X-axis", numeric_options, index=numeric_options.index('tenure') if 'tenure' in numeric_options else 0)
-y_col = st.selectbox("Y-axis", numeric_options, index=numeric_options.index('MonthlyCharges') if 'MonthlyCharges' in numeric_options else 0)
+x_col = st.selectbox(
+    "X-axis", 
+    numeric_options, 
+    index=numeric_options.index('tenure') if 'tenure' in numeric_options else 0
+)
+y_col = st.selectbox(
+    "Y-axis", 
+    numeric_options, 
+    index=numeric_options.index('MonthlyCharges') if 'MonthlyCharges' in numeric_options else 0
+)
+categorical_options = list(filtered_df.select_dtypes(include=['object','category']).columns)
+color_col = st.selectbox("Color by (categorical variable)", categorical_options, index=categorical_options.index('Churn') if 'Churn' in categorical_options else 0)
 scatter_chart = alt.Chart(filtered_df).mark_circle(size=60, opacity=0.6).encode(
     x=f'{x_col}:Q',
     y=f'{y_col}:Q',
-    color='Churn:N',
-    tooltip=[x_col, y_col, 'Churn']
+    color=f'{color_col}:N',
+    tooltip=[x_col, y_col, color_col]
 )
 st.altair_chart(scatter_chart, use_container_width=True)
+
 
 # ----------------------
 # Download Filtered Dataset

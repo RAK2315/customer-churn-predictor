@@ -14,13 +14,15 @@ containing information about 7,043 customers, including:
 - Service usage details (phone service, internet service, streaming, tech support)
 - Target: `Churn` (Yes/No)
 
-|    | customerID | gender | tenure | Contract        | MonthlyCharges | TotalCharges | Churn |
-|---:|------------|--------|--------|----------------|----------------|--------------|-------|
-|  0 | 7590-VHVEG | Female | 1      | Month-to-month | 29.85          | 29.85        | Yes   |
-|  1 | 5575-GNVDE | Male   | 34     | One year       | 56.95          | 1889.5       | No    |
-|  2 | 3668-QPYBK | Male   | 2      | Month-to-month | 53.85          | 108.15       | Yes   |
-|  3 | 7795-CFOCW | Male   | 45     | One year       | 42.30          | 1840.75      | No    |
-|  4 | 9237-HQITU | Female | 2      | Month-to-month | 70.70          | 151.65       | Yes   |
+### Dataset Preview
+| customerID | gender | SeniorCitizen | Partner | Dependents | tenure | PhoneService | MultipleLines | InternetService | OnlineSecurity | OnlineBackup | DeviceProtection | TechSupport | StreamingTV | StreamingMovies | Contract        | PaperlessBilling | PaymentMethod             | MonthlyCharges | TotalCharges | Churn |
+|------------|--------|---------------|---------|------------|--------|--------------|---------------|-----------------|----------------|--------------|------------------|-------------|-------------|-----------------|----------------|-----------------|---------------------------|----------------|--------------|-------|
+| 7590-VHVEG | Female | 0             | Yes     | No         | 1      | No           | No phone      | DSL             | No             | Yes          | No               | No          | No          | No              | Month-to-month | Yes             | Electronic check          | 29.85          | 29.85        | Yes   |
+| 5575-GNVDE | Male   | 0             | No      | No         | 34     | Yes          | No            | DSL             | Yes            | No           | Yes              | No          | No          | No              | One year       | No              | Mailed check              | 56.95          | 1889.50      | No    |
+| 3668-QPYBK | Male   | 0             | No      | No         | 2      | Yes          | No            | DSL             | Yes            | Yes          | No               | No          | No          | No              | Month-to-month | Yes             | Mailed check              | 53.85          | 108.15       | Yes   |
+| 7795-CFOCW | Male   | 0             | Yes     | No         | 45     | No           | No phone      | DSL             | No             | Yes          | No               | Yes         | No          | No              | One year       | No              | Bank transfer (automatic) | 42.30          | 1840.75      | No    |
+| 9237-HQITU | Female | 0             | No      | No         | 2      | Yes          | No            | Fiber optic     | No             | No           | No               | No          | No          | No              | Month-to-month | Yes             | Electronic check          | 70.70          | 151.65       | Yes   |
+
 
 
 ---

@@ -6,7 +6,6 @@ This project focuses on predicting customer churn for a telecom company. The pri
 
 ---
 
-## Dataset
 ## Dataset  
 This project uses the **Telco Customer Churn**: [Customer Churn Prediction – Kaggle](https://www.kaggle.com/code/bhartiprasad17/customer-churn-prediction/data)  
 containing information about 7,043 customers, including:
@@ -14,6 +13,15 @@ containing information about 7,043 customers, including:
 - Account information (tenure, contract type, payment method)
 - Service usage details (phone service, internet service, streaming, tech support)
 - Target: `Churn` (Yes/No)
+
+|    | customerID | gender | tenure | Contract        | MonthlyCharges | TotalCharges | Churn |
+|---:|------------|--------|--------|----------------|----------------|--------------|-------|
+|  0 | 7590-VHVEG | Female | 1      | Month-to-month | 29.85          | 29.85        | Yes   |
+|  1 | 5575-GNVDE | Male   | 34     | One year       | 56.95          | 1889.5       | No    |
+|  2 | 3668-QPYBK | Male   | 2      | Month-to-month | 53.85          | 108.15       | Yes   |
+|  3 | 7795-CFOCW | Male   | 45     | One year       | 42.30          | 1840.75      | No    |
+|  4 | 9237-HQITU | Female | 2      | Month-to-month | 70.70          | 151.65       | Yes   |
+
 
 ---
 
